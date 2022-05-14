@@ -48,7 +48,7 @@ namespace OnThisDayProject
                 return false;
         }
 
-       public void DayOfTheWeekCalculator(int monthNumber ,int dateNumber)
+       public int DayOfTheWeekCalculator(int monthNumber ,int dateNumber)
         {
 
             List<MonthsValue> MonthValForWeek = new List<MonthsValue> {
@@ -70,18 +70,6 @@ namespace OnThisDayProject
             string[] nameOfMonth = MonthValForWeek.Select(d => d.MonthName).ToArray();
             int[] MonthVal = MonthValForWeek.Select(d => d.MonthVal).ToArray();
 
-            List<DaysVal> dayVals = new List<DaysVal>{
-            new DaysVal{Name ="Sunday",val =0 },
-            new DaysVal{Name ="Monday",val =1 },
-            new DaysVal{Name ="Tuesday",val =2 },
-            new DaysVal{Name ="Wednesday",val =3 },
-            new DaysVal{Name ="Thursday",val =4 },
-            new DaysVal{Name ="Friday",val =5 },
-            new DaysVal{Name ="Saturday",val =6 },
-
-        };
-
-            string[] nameOfDay = dayVals.Select(d => d.Name).ToArray();
 
             List<GregorianCalendar> CG = new List<GregorianCalendar> {
 
@@ -132,19 +120,29 @@ namespace OnThisDayProject
             }
             
 
-           
-            
-
             int monthCode = MonthVal[monthNumber];
 
            
 
             int result = (yearCode + monthCode + dateNumber + centeryVal - ( isLeapYear() == false ? 0 : 1)) % 7;
 
-            Console.WriteLine(nameOfDay[result]);
+            return result;
         }
 
-        public void MonthCalculator() { 
+        public void MonthCalculator() {
+
+            List<DaysVal> dayVals = new List<DaysVal>{
+            new DaysVal{Name ="Sunday",val =0 },
+            new DaysVal{Name ="Monday",val =1 },
+            new DaysVal{Name ="Tuesday",val =2 },
+            new DaysVal{Name ="Wednesday",val =3 },
+            new DaysVal{Name ="Thursday",val =4 },
+            new DaysVal{Name ="Friday",val =5 },
+            new DaysVal{Name ="Saturday",val =6 },
+
+        };
+
+            string[] nameOfDay = dayVals.Select(d => d.Name).ToArray();
 
             List<MonthsValue> monthsVals = new List<MonthsValue> {
 
@@ -176,7 +174,7 @@ namespace OnThisDayProject
             int valueOFTheDay = 0;
             if (DayIndex <= 31)
             {
-                Console.WriteLine($"The Date is {DayIndex }/ {nameOfMonth.First()} ");
+                Console.WriteLine($"The Date is { nameOfDay[DayOfTheWeekCalculator(monthNumber, valueOFTheDay)]}, {DayIndex }/ {nameOfMonth.First()} / {Year}");
             }
             else
             {
@@ -186,11 +184,14 @@ namespace OnThisDayProject
                     dayCal += val[x];
                     valueOFTheDay = DayIndex - dayCal;
                 }
-                Console.WriteLine($"The Date is   {valueOFTheDay}/ {nameOfMonth[monthNumber]}  ");
-            }
-
-            DayOfTheWeekCalculator(monthNumber   , valueOFTheDay);
              
+                Console.WriteLine($"The Date is { nameOfDay[DayOfTheWeekCalculator(monthNumber, valueOFTheDay)]},  {valueOFTheDay}/ {nameOfMonth[monthNumber]}  / {Year}");
+            }
+           ApiClass ac = new ApiClass();
+
+            ac.getDataFromApi(12, 2, 2021);
+
+
 
         }
 

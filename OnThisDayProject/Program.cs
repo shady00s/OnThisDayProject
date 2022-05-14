@@ -11,28 +11,18 @@ namespace OnThisDayProject
         // the input handeler takes the return value from InputTester method and if the value is false then the application will restart 
 
         public static void InputHandeler() {
-
+            Console.Write("Enter day  (from 1 to 366): "  );
             string DayTime = Console.ReadLine();
+            Console.Write($"Enter Year  (Not exceeds {DateTime.Now.Year}): ");
             string Year = Console.ReadLine();
 
 
-            if (Utils.InputTester(DayTime, Year))
-            {
-                short dayTime = Convert.ToInt16(DayTime);
-                
+            CalenderCalculator CC = new CalenderCalculator();
+            CC.Year = Year;
+            CC.DayIndex = short.Parse(DayTime);
+            CC.MonthCalculator();
 
-                CalenderCalculator Cc = new CalenderCalculator();
-                Cc.Year = Year;
-                Cc.DayIndex = dayTime;
-                Cc.MonthCalculator();
-               
-
-            }
-            else
-            {
-
-                InputHandeler();
-            }
+            
         }
       
         static void Main(string[] args)

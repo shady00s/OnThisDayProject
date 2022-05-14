@@ -57,7 +57,7 @@ namespace OnThisDayProject
                 // checking if the day index is less than 366 (for heap year exception)  and the year is not more than the current year
                 if (dayIndex > 1 && dayIndex <= 366 && year <= DateTime.Now.Year)
                 {
-                    Console.WriteLine("succssess");
+                    
                     calenderCal.DayIndex = dayIndex;
                     calenderCal.Year = Year;
 

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace OnThisDayProject
 {
-    class UserInputModel
+    class DateModel
     {
-       
-       
-
+        public int day { get; set; }
+        public int month { get; set; }
+        public int year { get; set; }
     }
 }
