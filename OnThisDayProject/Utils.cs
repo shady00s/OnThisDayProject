@@ -59,7 +59,7 @@ namespace OnThisDayProject
                 {
                     Console.WriteLine("succssess");
                     calenderCal.DayIndex = dayIndex;
-                    calenderCal.Year = year;
+                    calenderCal.Year = Year;
 
                     return true;
 

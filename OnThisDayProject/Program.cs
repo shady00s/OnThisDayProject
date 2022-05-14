@@ -19,12 +19,12 @@ namespace OnThisDayProject
             if (Utils.InputTester(DayTime, Year))
             {
                 short dayTime = Convert.ToInt16(DayTime);
-                short year = Convert.ToInt16(Year);
+                
 
                 CalenderCalculator Cc = new CalenderCalculator();
-                Cc.Year = year;
+                Cc.Year = Year;
                 Cc.DayIndex = dayTime;
-               
+                Cc.MonthCalculator();
                
 
             }
