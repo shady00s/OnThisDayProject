@@ -11,30 +11,31 @@ namespace OnThisDayProject
 {
     class ApiClass
     {
-        public void getDataFromApi( int month,int day,int year)   {
+        public string getDataFromApi( int month,int day,int year)   {
 
             using (var client = new HttpClient())
             {
                 // client.BaseAddress = new Uri("https://byabbe.se/on-this-day");
                 //HTTP GET
-
+                string data;
                 try
                 {
                     var request = WebRequest.Create("https://byabbe.se/on-this-day/12/2/events.json");
                     request.Method = "GET";
 
-
                     using var webResponse = request.GetResponse();
                     using var webStream = webResponse.GetResponseStream();
 
                     using var reader = new StreamReader(webStream);
-                    var data = reader.ReadToEnd();
+                     data = reader.ReadToEnd();
 
+                    return data;
                     
                 }
                 catch (Exception err) {
 
                     Console.WriteLine(err);
+                    return data = "Error";
                 }
 
             }

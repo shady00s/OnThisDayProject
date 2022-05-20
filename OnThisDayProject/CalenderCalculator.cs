@@ -33,7 +33,7 @@ namespace OnThisDayProject
     class CalenderCalculator
     {
         // getting from the user  ( day number(from 1 to 366 ) and year )
-        public short DayIndex { get; set; }
+        public String DayIndex { get; set; }
         public string Year { get; set; }
 
         //checks if the year is leap year or not by take the modulus of the year is =0 
@@ -165,14 +165,14 @@ namespace OnThisDayProject
            
 
             string[] nameOfMonth = monthsVals.Select(d => d.MonthName).ToArray();
-            int[] val = monthsVals.Select(d => d.MonthVal).ToArray();
+            int[] MonthValues = monthsVals.Select(d => d.MonthVal).ToArray();
 
-           
+            int dayIndex = int.Parse(DayIndex);
 
-            int monthNumber = DayIndex / 31;
-            int dayCal = 0;
+            int monthNumber = dayIndex / 31;
+            int dayCalculator = 0;
             int valueOFTheDay = 0;
-            if (DayIndex <= 31)
+            if (dayIndex <= 31)
             {
                 Console.WriteLine($"The Date is { nameOfDay[DayOfTheWeekCalculator(monthNumber, valueOFTheDay)]}, {DayIndex }/ {nameOfMonth.First()} / {Year}");
             }
@@ -181,8 +181,8 @@ namespace OnThisDayProject
                 for (int x = 0; x < monthNumber; x++)
                 {
                     //to create the number of the days 
-                    dayCal += val[x];
-                    valueOFTheDay = DayIndex - dayCal;
+                    dayCalculator += MonthValues[x];
+                    valueOFTheDay = dayIndex - dayCalculator;
                 }
              
                 Console.WriteLine($"The Date is { nameOfDay[DayOfTheWeekCalculator(monthNumber, valueOFTheDay)]},  {valueOFTheDay}/ {nameOfMonth[monthNumber]}  / {Year}");
