@@ -18,7 +18,7 @@ namespace OnThisDayProject
         }
 
         public void OnUserInputError() {
-            Console.WriteLine();
+            Console.WriteLine("There is error Please try again.");
         }
         public void DataOutPut() {
 
