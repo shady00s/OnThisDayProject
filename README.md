@@ -2,9 +2,11 @@
 a simple console application that takes year and day number and return a useful event happened in this day.
 
 ## How to use it?
+  - Go to file bin/Debug/net6.0/onThisProject2.exe
   - Enter number from 1 to 365
   - choose one from the events (Deaths , Births, Events).
   
+
 ## Screenshots 
 
 
