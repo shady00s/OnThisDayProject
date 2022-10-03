@@ -1,5 +1,6 @@
 # OnThisDayProject
-a simple console application that takes year and day number and return a useful event happened in this day.
+a simple console application that takes year and day number and return a useful event happened in this day by using Wikipedia, On this Day  https://byabbe.se/on-this-day/.
+
 
 ## How to use it?
   - Go to file bin/Debug/net6.0/onThisProject2.exe
