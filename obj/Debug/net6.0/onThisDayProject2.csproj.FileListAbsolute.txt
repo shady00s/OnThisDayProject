@@ -1,0 +1,17 @@
+D:\projects\c#\onThisDayProject2\bin\Debug\net6.0\onThisDayProject2.exe
+D:\projects\c#\onThisDayProject2\bin\Debug\net6.0\onThisDayProject2.deps.json
+D:\projects\c#\onThisDayProject2\bin\Debug\net6.0\onThisDayProject2.runtimeconfig.json
+D:\projects\c#\onThisDayProject2\bin\Debug\net6.0\onThisDayProject2.dll
+D:\projects\c#\onThisDayProject2\bin\Debug\net6.0\onThisDayProject2.pdb
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.csproj.AssemblyReference.cache
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.AssemblyInfoInputs.cache
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.AssemblyInfo.cs
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.csproj.CoreCompileInputs.cache
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.dll
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\refint\onThisDayProject2.dll
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.pdb
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.genruntimeconfig.cache
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\ref\onThisDayProject2.dll
+D:\projects\c#\onThisDayProject2\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\projects\c#\onThisDayProject2\obj\Debug\net6.0\onThisDayProject2.csproj.CopyComplete
