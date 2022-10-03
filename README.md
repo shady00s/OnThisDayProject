@@ -11,4 +11,4 @@ a simple console application that takes year and day number and return a useful 
 ## Screenshots 
 
 
-![Screenshot (86)](https://user-images.githubusercontent.com/64488184/193572714-dbf2bcd2-7c95-4986-8e90-8a0d264aa6d8.png)
+![Screenshot (86)](https://user-images.githubusercontent.com/64488184/193572935-17cba5dc-a7f2-4284-a27f-1c808fd0e326.png)
